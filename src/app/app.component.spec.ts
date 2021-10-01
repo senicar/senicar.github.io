@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'senicarnet'`, () => {
+  it(`should have as title 'senicar-net'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('senicarnet');
+    expect(app.title).toEqual('senicar-net');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('senicarnet app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('senicar-net app is running!');
   });
 });

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "senicarnet": {
+    "senicar-net": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/senicarnet",
+            "outputPath": "dist/senicar-net",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "senicarnet:build:production"
+              "browserTarget": "senicar-net:build:production"
             },
             "development": {
-              "browserTarget": "senicarnet:build:development"
+              "browserTarget": "senicar-net:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "senicarnet:build"
+            "browserTarget": "senicar-net:build"
           }
         },
         "test": {
@@ -103,9 +103,15 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "cname": "senicar.net"
+          }
         }
       }
     }
   },
-  "defaultProject": "senicarnet"
+  "defaultProject": "senicar-net"
 }
