@@ -1,1 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */
+@import 'photoswipe/dist/photoswipe.css';
+
+
+@layer base {
+    html {
+      font-family: Roboto, system-ui, sans-serif;
+    }
+  }
+
+h1 {
+    font-family: "Roboto Condensed", system-ui, sans-serif;
+}
+
+.page-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 100vh;
+    width: 100%;
+}
+
+.thumbnail {
+    display: block;
+    width: 100%;
+}
+
+img  {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}

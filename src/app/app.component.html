@@ -1,3 +1,18 @@
+<div class="page-wrapper">
+    <h1 class="font-bold text-3xl text-gray-500 bg-gray-800 p-1 mb-1">
+        <div class="container mx-auto">Boštjan Seničar</div>
 
-Boštjan Seničar - senicar.net
-<router-outlet></router-outlet>
+    </h1>
+
+    <div id="my-gallery" class="container mx-auto columns-2 md:columns-3 xl:columns-4 gap-1">
+    <a
+        class="thumbnail mb-1"
+        attr.data-pswp-width="{{item.width}}"
+        attr.data-pswp-height="{{item.height}}"
+        href="/assets/images/{{item.src}}"
+        *ngFor="let item of images; let i = index"
+    >
+        <img src="/assets/thumbs/{{item.src}}" />
+    </a>
+    </div>
+</div>
